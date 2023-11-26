@@ -7,12 +7,13 @@
     }
     header {
         background-color: #333;
+        
         /* background-image: url(../B/B.jpg);
         backface-visibility: visible;
         background-repeat: none;
         background-size:cover; */
         color: #fff;
-        padding: 1em;
+        padding: 14px;
         text-align: center;
         width: 100%;
         position: fixed;
@@ -79,10 +80,8 @@
         background: transparent;
         border: 0px none;
     }
-    header,nav{
-       
-    }
-    .top-Direction {
+    
+    #top-Direction {
         height: 100px;
         width: 100px;
         border-radius: 50%;
@@ -99,6 +98,49 @@
         border: 2px solid rgb(179, 255, 0);
         border-radius: 50%;
     }
-    .top:hover {
+    #top:hover {
         border: 2px solid rgb(72, 0, 255);
+        padding: 0px;
+
+    }
+    #home-footer {
+        position: relative;
+        top: 90%;
+    }
+    #home-footer a {
+        margin-left: 15px;
+        color: #fff;
+    }
+    /* #home-footer a:hover {
+        
+        color: rgb(139, 139, 243);
+    } */
+    input{
+        background: transparent;
+        border-radius: 3px;
+        border: 1px dotted rgb(98, 82, 82);
+    }
+    
+    input: hover{
+        background: rgb(230, 236, 238);
+       
+    }
+    fieldset{
+        border-radius: 5px;
+        width: fit-content;
+    }
+    fieldset>button{
+        margin-left: 45px;
+        border-radius: 15px;
+        padding: 5px;
+        border-color:rgb(39, 18, 18);
+    }
+    fieldset>button: hover{
+        border-color:rgb(249, 248, 248);
+    }
+    textarea{
+        background-color: white;
+    }
+    textarea: hover{
+        background-color: rgb(249, 241, 241);
     }
