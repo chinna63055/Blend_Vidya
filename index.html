@@ -1,53 +1,201 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="style.css">
-<title>Movies</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Info Site</title>
+    <link rel="stylesheet" href="Style.css"> 
+    <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Font Awesome -->
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-  rel="stylesheet"
-/>
-<!-- Google Fonts -->
-<link
-  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-  rel="stylesheet"
-/>
-<!-- MDB -->
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.0.0/mdb.min.css"
-  rel="stylesheet"
-/>
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function openLink(url) {
+        if (url) {
+            window.open(url, '_blank', 'noopener,noreferrer');
+        }
+    }
+    </script>
 
 </head>
 <body>
     <header>
-        <h1> Movies</h1>
-            
-
-    <nav>
-        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-        
-        <a href="Blog_Creations.html">Marvel Movies</a>
-        <a href="Australia.html">Australia</a>
-        <a href="Egypt_temple.html">Egypt</a>
-        <a href="Japan_temple.html">Japan</a>
-        <a href="U.S.A_Temples.html">U.S.A</a>
-        
-        <a href="about.html">About</a>
-        <a href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a>
-        <a href=""><i class="fa-solid fa-gopuram"></i></a>
-    </nav>
+        <div class="logo">MovieInfo</div>
+        <nav>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li>
+                    <label for="cars">Movies : </label>
+                    <select name="cars" id="cars" onchange="openLink(this.value)">
+                        <option value="">Select a movie</option>
+                        <option value="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2FBen%2010%20ultimate%2FBen%2010%20Classic%C2%A0S1%2Fs1%2F01%20Ben%2010%20Alien%20Force%20S3%20%E2%80%93%20Episode%201%20%E2%80%93%20Vengeance%20of%20Vilgax%20%E2%80%93%20Tam%2BTel%2BHin%2BEng%20720p%20%5Bwww.Toonworldtamil.com%5D.mkv&t=-1">Ben 10</option>
+                        <option value="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2Fmarvel%20universe%2FGuardians%20of%20the%20Galaxy%2FGuardians%20Of%20The%20Galaxy%20%282014%20-%202017%29%2FGuardians%20Of%20The%20Galaxy%20%282014%29%20BluRay%20-%20720p%20-%20x264%20-%20%5BTam%20%2B%20Tel%20%2B%20Hin%20%2B%20Eng%5D%20-%20AAC%20-%201.2GB%20-%20ESub.mkv&t=-1">Guardians of the Galaxy</option>
+                        <option value="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2Fmarvel%20universe%2FSpider%20Man%2FSpiderMan%20%282002%29%20720p%20-%20BDRip%20-%20%5BTelugu%20%2B%20Hindi%20%2B%20Tamil%20%2B%20Eng%5D%20x264%201GB%20ESub.mkv&t=-1">Spider Man Universe</option>
+                        <option value="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2Fmarvel%20universe%2Fant%20man%2FAnt-Man%20%282015%29%20%20%2812%29.mkv&t=-1">Ant Man</option>
+                        <option value="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2Fmarvel%20universe%2Fvenom%2FVenom%20%282018%29%20720p%20BluRay%20-%20Original%20%5BTelugu%20%2B%20Tamil%20%2B%20Hindi%20%2B%20Eng%5D%201.2GB%20ESub.mkv&t=-1">Venom</option>
+                        <option value="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2Fhollywood%2FTransformers%2FTransformers%20%282007%29%20BluRay%20-%20720p%20-%20x264%20-%20%5BTam%20%2B%20Tel%20%2B%20Hin%20%2B%20Eng%5D%20-%20AAC%20-%201.6GB%20-%20ESub.mkv&t=-1">Transformers</option>
+                    </select>
+                    
+                   
+                    
+                </li>
+                <li><a href="#Top_Rated" name="Top">Top Rated</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for movies...">
+        </div>
+    </header>
 
     <main>
-      <div class="movie-grid">
+        <section class="banner">
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                  <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                  <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+              
+                <!-- The slideshow/carousel -->
+                
+              
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </button>
+              </div>
+        </section>
+
+        <section class="latest-releases">
+            <h2>Telugu Movies</h2>
+            <h3>Nani's Movies</h3>
+            <div class="movie-card">
+                    
+                    
+
+                <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2Ftelugu%2FNani%20natural%20star%2FKrishnagadi.Veera.Prema.Gaadha.2016.720p.BRRip.x264.Telugu.AAC-ETRG.mp4&t=-1" target="_blank" rel="noopener noreferrer">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Krishna_Gadi_Veera_Prema_Gaadha_Telugu_poster.jpg" alt="" srcset="">
+                </a>
+                <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2Ftelugu%2FNani%20natural%20star%2FJagadish%20%282021%29%20720p%20Telugu%C2%A0HDRip%20-%20x264%20-%20%28DD%2B5.1%20-%20192Kbps%20%26%20AAC%202.0%29%20-%201.3GB%C2%A0-%20ESub.mkv&t=-1" target="_blank" rel="noopener noreferrer">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNmE4NTVkNWYtN2NkOC00ZDgzLWJhNDMtM2U2ZGU0OWEzOWQwXkEyXkFqcGdeQXVyODEyNjEwMDk@._V1_.jpg" alt="" srcset="">
+                </a>
+                <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2Ftelugu%2FNani%20natural%20star%2FPaisa.mp4&t=-1" target="_blank" rel="noopener noreferrer">
+                    <img src="https://th.bing.com/th/id/OIP.By2lhGy1TPnaQX-K7s1-WAHaO0?rs=1&pid=ImgDetMain" alt="" srcset="">
+                </a>
+                <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2Ftelugu%2FNani%20natural%20star%2FBale%20Bale%20Magadivoy%20Full%20Movie%20HD%20--%20Nani,%20Lavanya%20Tripathi%20--%20Pmb%20Tv.mp4&t=-1" target="_blank" rel="noopener noreferrer">
+                    <img src="https://www.themoviedb.org/t/p/original/bboa6LfWSyhxtoCHffOl43gU8GM.jpg" alt="" srcset="">
+                </a>
+                <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2Ftelugu%2FNani%20natural%20star%2FNANI%27S%20GANG%20LEADER%20%282019%29%20720p%20Telugu%20Proper%20HDRip%20x264%20MP3%20900MB%20ESub.mkv&t=-1" target="_blank" rel="noopener noreferrer">
+                    <img src="https://moviegalleri.net/wp-content/uploads/2019/07/Nani-Gang-Leader-Movie-First-Look-Poster-HD.jpg" alt="" srcset="">
+                </a>
+                <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2Ftelugu%2FNani%20natural%20star%2FYeto%20Vellipoyindhi%20Manasu%20%282012%29%20720p%20Telugu%20HDTV-Rip%20-%201.4%20GB.mkv&t=-1" target="_blank" rel="noopener noreferrer">
+                    <img src="https://moviegalleri.net/wp-content/gallery/yeto-vellipoyindi-manasu-wallpapers/yeto_vellipoyindi_manasu_movie_posters_0075.jpg" alt="" srcset="">
+                </a>
+                <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2Ftelugu%2FNani%20natural%20star%2Fjerssy%282019%29HD.mp4&t=-1" target="_blank" rel="noopener noreferrer">
+                    <img src="https://m.media-amazon.com/images/M/MV5BYzhjMzhlNjgtMDgwMy00Y2ZlLWEwMjktNjU4NjYyZTkzNmFlXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg" alt="" srcset="">
+                </a>
+                <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2Ftelugu%2FNani%20natural%20star%2FMCA%20-%20Middle%20Class%20Abbayi%20%282017%29%20720p%20HDRip%20Dual%20Audio%20x264%20ESubs%20-%20Vegamovies..mkv&t=-1" target="_blank" rel="noopener noreferrer">
+                    <img src="https://flxt.tmsimg.com/assets/p14934585_p_v8_ab.jpg" alt="" srcset="">
+                </a>
+                <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2Ftelugu%2FNani%20natural%20star%2FAnte%20Sundaraniki%20%282022%29%20720p%20Telugu%20HQ%20HDRip%20x265%20-%20%28DD.5.1%20-%20192Kbps%20%26%20AAC%29%20-%20950MB%20-%20ESub.mkv&t=-1" target="_blank" rel="noopener noreferrer">
+                    <img src="https://th.bing.com/th/id/OIP.m4RYQHpVss9Qii3oLDeqtwHaLH?rs=1&pid=ImgDetMain" alt="" srcset="">
+                </a>
+                
+            </div>
+              
+                <!-- End movie block -->
+        </section>
+
+        <section class="trending-movies">
+            <h3>Ben 10 Classic </h3>
+            <div class="movie-grid">
+                <!-- Repeat this block for each movie -->
+             
+                    <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2FBen%2010%20ultimate%2FBen%2010%20Classic%C2%A0S1%2Fs1%2F01%20Ben%2010%20Alien%20Force%20S3%20%E2%80%93%20Episode%201%20%E2%80%93%20Vengeance%20of%20Vilgax%20%E2%80%93%20Tam%2BTel%2BHin%2BEng%20720p%20%5Bwww.Toonworldtamil.com%5D.mkv&t=-1" target="_blank" rel="noopener noreferrer">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/91zG8%2B3SQ3L._AC_SX569_.jpg" alt="" srcset="">
+                    </a>
+                    <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2FBen%2010%20ultimate%2FBen%2010%20Classic%C2%A0S1%2Fs2%2FBen10%20Classic%20S02E02%5BRareToonsIndia%5D.mp4&t=-1" target="_blank" rel="noopener noreferrer">
+                        <img src="https://th.bing.com/th/id/OIP.Ql74rNwyzD4FUZHveByfjAHaFj?w=236&h=180&c=7&r=0&o=5&dpr=1.8&pid=1.7" alt="" srcset="">
+                    </a>
+                    <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2FBen%2010%20ultimate%2FBen%2010%20Classic%C2%A0S1%2Fs3%2FBen10%20Classic%20S03E02%20%5BRareToonsIndia%5D.mkv&t=-1" target="_blank" rel="noopener noreferrer">
+                        <img src="https://is2-ssl.mzstatic.com/image/thumb/Music69/v4/32/77/61/327761b7-a0b2-a718-9816-2d41fe7da3f6/source/1200x630bb.jpg" alt="" srcset="">
+                    </a>
+                    <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2FBen%2010%20ultimate%2FBen%2010%20Classic%C2%A0S1%2Fs4%2Fs4%2FBen%2010%20Classic%C2%A0S4%20%E2%80%93%20Episode%201%20%E2%80%93%20Perfect%20Day%20%E2%80%93%20Tam%2BTel%2BHin%2BEng%20Esub%20480p%20WEBRip%20%5Bwww.Toonworldtamil.com%5D.mkv&t=-1" target="_blank" rel="noopener noreferrer">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/91eh0hXwVOL._RI_.jpg" alt="" srcset="">
+                    </a>
+
+            </div>
+        </section>    
+        <section class="trending-movies">
+            <h3>Ben 10 Omniverse </h3>
+                <div class="movie-card">
+                    
+                    
+                    <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2FBen%2010%20ultimate%2FBen%2010%20Omniverse%20S1%2F05%20Ben%2010%20Omniverse%20S1%20%E2%80%93%20Episode%205%20%E2%80%93%20Have%20I%20Got%20a%20Deal%20for%20You%20%E2%80%93%20Tam%2BTel%2BHin%2BEng%20720p%20%5Bwww.Toonworldtamil.com%5D.mkv&t=-1" target="_blank" rel="noopener noreferrer">
+                        <img src="https://images.justwatch.com/poster/12116969/s718/temporada-1.jpg" alt="">
+                    </a>
+                    <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2FBen%2010%20ultimate%2FBen%2010%20Omniverse%20S2%2FBen%2010%20Omniverse%20S2%20%E2%80%93%20Episode%201%20%E2%80%93%20Outbreak%20%E2%80%93%20Tam%2BTel%2BHin%2BEng%20720p%20%5Bwww.Toonworldtamil.com%5D.mkv&t=-1" target="_blank" rel="noopener noreferrer">
+                        <img src="https://www.themoviedb.org/t/p/original/fQFC8IBWJZ5mXUWME83Zj42ETAZ.jpg" alt="" srcset="">
+                    </a>
+                    <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2FBen%2010%20ultimate%2FBen%2010%20Omniverse%20S3%2FBen%2010%20Omniverse%20S3%20%E2%80%93%20Episode%201%20%E2%80%93%20Showdown,%20Part%201%20%E2%80%93%20Tam%2BTel%2BHin%2BEng%20720p%20%5Bwww.Toonworldtamil.com%5D.mkv&t=-1" target="_blank" rel="noopener noreferrer">
+                        <img  src="https://images.justwatch.com/poster/289921064/s718/season-3.%7Bformat%7D" alt="" srcset="">
+                    </a>
+                    
+                </div>
+           
+        </section>      
+        <section class="trending-movies">
+                <h3>Ben 10 Alien Force</h3>
+                <div class="movie-card">
+                  
+            
+                    <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2FBen%2010%20ultimate%2FBen%2010%20Alien%20Force%201%2FBen%2010%20Alien%20Force%20S1%20%E2%80%93%20Episode%202%20%E2%80%93%20Ben%2010%20Returns,%20Part%202%20%E2%80%93%20Tam%2BTel%2BHin%2BEng%20720p%20%5Bwww.Toonworldtamil.com%5D.mkv&t=-1" target="_blank" rel="noopener noreferrer">
+                        <img src=" https://m.media-amazon.com/images/I/71DcFHbeZpL._AC_SL1500_.jpg" alt="" srcset="">
+                    </a>
+    
+                    <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2FBen%2010%20ultimate%2FBen%2010%20Alien%20Force%202%2FBen%2010%20Alien%20Force%20S2%20%E2%80%93%20Episode%201%20%E2%80%93%20Darkstar%20Rising%20%E2%80%93%20Tam%2BTel%2BHin%2BEng%20720p%20%5Bwww.Toonworldtamil.com%5D.mkv&t=-1" target="_blank" rel="noopener noreferrer">
+                        <img src="https://www.backtothe80sdvds.com/images/seriesImages2/Ben-10-Alien-Force-Season-2.jpg" alt="" srcset="">
+                    </a>
+    
+                    <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2FBen%2010%20ultimate%2FBen%2010%20Alien%20Force%203%202009%2010%2F01%20Ben%2010%20Alien%20Force%20S3%20%E2%80%93%20Episode%201%20%E2%80%93%20Vengeance%20of%20Vilgax%20%E2%80%93%20Tam%2BTel%2BHin%2BEng%20720p%20%5Bwww.Toonworldtamil.com%5D.mkv&t=-1" target="_blank" rel="noopener noreferrer">
+                        <img src="https://images.justwatch.com/poster/37533829/s718/season-3.%7Bformat%7D" alt="" srcset="">
+                    </a>
+    
+                </div>
+            </section>
+            <section class="trending-movies">
+                <h3>Ben 10: Ultimate Alien</h3>
+                <div class="movie-card">
+                  
+                    
+                   
+                    <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2FBen%2010%20ultimate%2FBen%2010%20Ultimate%20Alien%20Season%201%2F1%20Ben%2010%20Ultimate%20Alien%20S1%20%E2%80%93%20Episode%201%20%E2%80%93%20Fame%20%E2%80%93%20Tam%2BTel%2BHin%2BEng%20720p%20%5Bwww.Toonworldtamil.com%5D.mkv&t=-1" target="_blank" rel="noopener noreferrer">
+                        <img src="https://th.bing.com/th/id/OIP.w_ypV87SeKomfjN8ldoOnwHaKh?pid=ImgDet&w=205&h=290&c=7&dpr=1.8" alt="" srcset="">
+                    </a>
+                    
+                    <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2FBen%2010%20ultimate%2FBen%2010%20Ultimate%20Alien%20Season%202%2F1%20Ben%2010%20Ultimate%20Alien%20S2%20%E2%80%93%20Episode%201%20%E2%80%93%20The%20Transmogrification%20of%20Eunice%20%E2%80%93%20Tam%2BTel%2BHin%2BEng%20720p%20%5Bwww.Toonworldtamil.com%5D.mkv&t=-1" target="_blank" rel="noopener noreferrer">
+                        <img src="https://th.bing.com/th/id/OIP.PtHgirI5OgOayxfDpGMo1AAAAA?pid=ImgDet&w=205&h=290&c=7&dpr=1.8" alt="" srcset="">
+                    </a>
+    
+                    <a href="https://www.1024terabox.com/play/video?path=%2Ftelugu%20movies%2FBen%2010%20ultimate%2FBen%2010%20Ultimate%20Alien%20Season%203%2FBen%2010%20Ultimate%20Alien%20S3%20%E2%80%93%20Episode%201%20%E2%80%93%20The%20Purge%20%E2%80%93%20Tam%2BTel%2BHin%2BEng%20720p%20%5Bwww.Toonworldtamil.com%5D.mkv&t=-1" target="_blank" rel="noopener noreferrer">
+                        <img src="https://th.bing.com/th/id/OIP.p0pFBmuembtDdXJxb3P16gHaKh?pid=ImgDet&w=205&h=290&c=7&dpr=1.8" alt="" srcset="">
+                    </a>
+                </div>
+                <!-- End movie block -->
+    
+        </section>
+
+        <section class="top-rated" >
+            
+            <h2 name="">Top Rated Movies</h2>
+            <div class="movie-grid">
                 <!-- Repeat this block for each movie -->
               
                 <div class="movie-card">
@@ -296,13 +444,21 @@
                 <!-- End movie block -->
             </div>
         </section>
-  </main>
-<footer id="home-footer">
-  <i class="fa-solid fa-gopuram"></i><br>
-  <a href="">Terms and Privacy Notice</a> <a href="contact.html">Send Us Message</a><a href="">Help</a><br>
-  <a href="">ancienttemples@gmail.com</a>
-<p>&copy; 1996-2023, Ancient Temples.com, All rights reserved.</p>
-</footer>
+        <center>
+            <!-- <button type="button"><a href="Home" name="Home">Top</a></button> -->
+        </center>
+    </main>
 
+    <footer>
+        <p>&copy; 2024 MovieInfo. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>
