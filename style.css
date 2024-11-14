@@ -121,21 +121,18 @@ footer nav ul li a {
     color: #fff;
     text-decoration: none;
 }
-/* img{
-    border-radius: 15px;
-    height: 400px;
-    width: 200px;
-} */
 .movie-card {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* space between images */
+    /* display: flex; */
+    display: block;
+    flex-wrap:wrap;
+    gap: 30px; /* space between images */
 }
 
 .movie-card img {
     width: 150px; /* Set a fixed width */
     height: 225px; /* Set a fixed height to maintain aspect ratio */
     object-fit: cover; /* Ensures images fill the set size without distortion */
+    margin-left: 10px;
     border-radius: 5px; /* Optional: rounds the corners of the images */
 }
 
